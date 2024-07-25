@@ -1,0 +1,8 @@
+---
+- name: Install rsyslog
+  ansible.builtin.dnf:
+    name:
+      - rsyslog
+    state: latest
+  become: true
+  notify: Enable & start rsyslog
