@@ -8,6 +8,7 @@ syslog_conf_file: "{{ syslog_template }}"
 
 # HAProxy Template example
 haproxy_template: haproxy.cfg
+haproxy_template_dir: example
 #from playbook vars: haproxy_conf_dir
 haproxy_conf_file: "{{ haproxy_template }}"
 

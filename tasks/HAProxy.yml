@@ -13,7 +13,7 @@
 
 - name: Template HAProxy config
   ansible.builtin.template:
-    src: "{{ haproxy_template }}.j2"
+    src: "{{ haproxy_template_dir }}/{{ haproxy_template }}.j2"
     dest: "{{ haproxy_conf_dir }}/{{ haproxy_conf_file }}"
     owner: root
     group: root
