@@ -1,2 +1,7 @@
 global
-    log 127.0.0.1:{{ log_port }}  local0 
+    log 127.0.0.1:{{ log_port }}  local0
+
+
+defaults
+    log global
+    option httplog

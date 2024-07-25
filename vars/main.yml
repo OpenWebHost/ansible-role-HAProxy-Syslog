@@ -1,7 +1,7 @@
 ---
 log_port: 514
 
-syslog_template: rsyslog.conf
+syslog_template: rsyslog_haproxy
 syslog_conf_dir: /etc/rsyslog.d
 syslog_conf_file: "{{ syslog_template }}"
 
