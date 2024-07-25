@@ -6,3 +6,6 @@
     state: latest
   become: true
   notify: Enable & start rsyslog
+
+- ansible.builtin.include_tasks:
+    file: HAProxy.yml

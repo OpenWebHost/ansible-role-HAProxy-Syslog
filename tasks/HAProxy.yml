@@ -1,0 +1,22 @@
+---
+- name: Template RSysLog config
+  ansible.builtin.template:
+    src: "{{ syslog_template_file }}.j2"
+    dest: "{{ syslog_conf_dir }}/{{ syslog_conf_file }}"
+    owner: root
+    group: root
+    mode: '0644'
+    force: yes
+  become: true
+  notify: Restart rsyslog
+
+
+- name: Template HAProxy config
+  ansible.builtin.template:
+    src: "{{ haproxy_template_file }}.j2"
+    dest: "{{ haproxy_conf_dir }}/{{ haproxy_conf_file }}"
+    owner: root
+    group: root
+    mode: '0644'
+    force: yes
+  become: true

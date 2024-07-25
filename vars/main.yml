@@ -1,2 +1,11 @@
 ---
-# vars file for try
+log_port: 514
+
+syslog_template: rsyslog.conf
+syslog_conf_dir: /etc/rsyslog.d
+syslog_conf_file: "{{ syslog_template }}"
+
+
+haproxy_template: haproxy.cfg
+haproxy_conf_dir: /opt/haproxy
+haproxy_conf_file: "{{ haproxy_template }}"
