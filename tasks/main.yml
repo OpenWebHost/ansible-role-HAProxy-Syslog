@@ -1,4 +1,10 @@
 ---
+- ansible.builtin.include_tasks:
+    file: pre.yml
+
+- ansible.builtin.include_tasks:
+    file: Remote Logging.yml
+
 - name: Install rsyslog
   ansible.builtin.dnf:
     name:

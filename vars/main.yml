@@ -1,7 +1,7 @@
 ---
 log_port: 514
 
-syslog_template: rsyslog_haproxy
+syslog_template: rsyslog_haproxy.conf
 syslog_conf_dir: /etc/rsyslog.d
 syslog_conf_file: "{{ syslog_template }}"
 
@@ -10,3 +10,7 @@ syslog_conf_file: "{{ syslog_template }}"
 haproxy_template: haproxy.cfg
 #from playbook vars: haproxy_conf_dir
 haproxy_conf_file: "{{ haproxy_template }}"
+
+
+# immutable
+rsyslog_config: "/etc/rsyslog.conf"

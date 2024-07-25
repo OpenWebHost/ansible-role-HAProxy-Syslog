@@ -1,0 +1,17 @@
+---
+
+- name: Enable receive logs
+  ansible.builtin.lineinfile:
+    path: "{{ rsyslog_config }}"
+    regexp: '^module(load="imtcp")'
+    line: 'module(load="imtcp")'
+  become: true
+  notify: Restart rsyslog
+
+- name: Enable receive logs port
+  ansible.builtin.lineinfile:
+    path: "{{ rsyslog_config }}"
+    regexp: '^input(type="imtcp" port="514")'
+    line: 'input(type="imtcp" port="514")'
+  become: true
+  notify: Restart rsyslog
