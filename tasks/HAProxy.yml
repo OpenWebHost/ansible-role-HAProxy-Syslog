@@ -1,4 +1,7 @@
 ---
+- ansible.builtin.include_tasks:
+    file: pre.yml
+
 - name: Template RSysLog config
   ansible.builtin.template:
     src: "{{ syslog_template }}.j2"

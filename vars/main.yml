@@ -6,6 +6,7 @@ syslog_conf_dir: /etc/rsyslog.d
 syslog_conf_file: "{{ syslog_template }}"
 
 
+# HAProxy Template example
 haproxy_template: haproxy.cfg
-haproxy_conf_dir: /opt/haproxy
+#from playbook vars: haproxy_conf_dir
 haproxy_conf_file: "{{ haproxy_template }}"
